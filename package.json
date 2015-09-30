@@ -1,0 +1,27 @@
+{
+  "name": "react-native-realtimestorage-android",
+  "version": "1.0.1",
+  "description": "The Realtime Cloud Storage client for React-Native Android",
+  "main": "RCTRealtimeCloudStorageAndroid.js",
+  "scripts": {
+    "start": "exit 1"
+  },
+  "repository": {
+  "type": "git",
+  "url": "https://github.com/realtime-framework/RCTRealtimeStorageAndroid.git"
+  },
+  "keywords": [
+    "react-component",
+    "reactnative",
+    "react-native",
+    "Realtime Cloud Storage",
+    "Realtime",
+    "Android"
+  ],
+  "author": "Realtime",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realtime-framework/RCTRealtimeStorageAndroid/issues"
+  },
+  "homepage": "https://github.com/realtime-framework/RCTRealtimeStorageAndroid"
+}
