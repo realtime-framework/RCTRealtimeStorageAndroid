@@ -38,15 +38,19 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 
  You are ready to go.
 
----
 
+## Example
+[This example](https://github.com/realtime-framework/StorageReactNativeTodo) uses the Realtime Cloud Storage React Native Android SDK to save and retrieve todo lists from the cloud. It can be also used with the other Realtime Todo samples, including the [on-line example](http://storage-public.realtime.co/samples/todo-lbl/index.html#/). 
+
+Data will be synced in real-time between devices and browsers.
+
+## Documentation
 
 ###Importing RCTRealtimeCloudStorageAndroid to your project
 
 	var module = require('RCTRealtimeCloudStorageAndroid');
 	var RCTRealtimeCloudStorage = new module();
 
-## Documentation
 
 ####ProvisionLoad list
 
