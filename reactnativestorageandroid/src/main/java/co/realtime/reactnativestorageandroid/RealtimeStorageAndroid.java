@@ -1,4 +1,4 @@
-package com.rctrealtimestorageandroid;
+package co.realtime.reactnativestorageandroid;
 
 import android.support.annotation.Nullable;
 import android.util.Log;

@@ -8,31 +8,67 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 
 * Create a new react-native project. [Check react-native getting started](http://facebook.github.io/react-native/docs/getting-started.html#content)
 
-* On the terminal, go to `PROJECT_DIR/node_modules/react-native`.
-
 * Execute
 
 		 npm install --save react-native-realtimestorage-android
 
-* Drag all files `node_modules/react-native-realtimestorage-android` to your `src` package folder.
+* In `android/settings.gradle`
 
-* Add `compile co.realtime:storage-android:1.2.+` to app dependencies in your `build.gradle` file.
+		...
+		include ':react-native-realtime-storage-android'
+		project(':react-native-realtime-storage-android').projectDir = new File(settingsDir,'../node_modules/reactnativestorageandroid')
 
-*	Add the following configuration to your `build.gradle` file.
+* In `android/app/build.gradle`
 
 		android {
-		...
+		    ...
+
 		    packagingOptions {
 		        exclude 'META-INF/DEPENDENCIES'
 		        exclude 'META-INF/NOTICE'
 		        exclude 'META-INF/LICENSE'
 		    }
-	    ...
-	    }
+		    
+			...
+		}
 
-* Drag `RCTRealtimeStorageAndroid.js` to the root of your project.
+		dependencies {
+			...
+		    compile project(':react-native-realtime-storage-android')
+		}
 
 * Add `.addPackage(new CustomReactPackage())` to the `onCreate` method of `MainActivity`.
+
+		import co.realtime.reactnativestorageandroid.CustomReactPackage; //<-- import
+
+		public class MainActivity extends Activity implements DefaultHardwareBackBtnHandler {
+		
+		    ...
+		    
+		    @Override
+		    protected void onCreate(Bundle savedInstanceState) {
+		        super.onCreate(savedInstanceState);
+		        mReactRootView = new ReactRootView(this);
+		
+		        mReactInstanceManager = ReactInstanceManager.builder()
+		                .setApplication(getApplication())
+		                .setBundleAssetName("index.android.bundle")
+		                .setJSMainModuleName("index.android")
+		                .addPackage(new MainReactPackage())
+		                .addPackage(new CustomReactPackage()) //<-- Add here
+		                .setUseDeveloperSupport(BuildConfig.DEBUG)
+		                .setInitialLifecycleState(LifecycleState.RESUMED)
+		                .build();
+		
+		        mReactRootView.startReactApplication(mReactInstanceManager, "YourProject", null);
+		
+		        setContentView(mReactRootView);
+		    }
+
+   }
+
+
+* Drag `RCTRealtimeStorageAndroid.js` to the root of your project.
 
 
 
