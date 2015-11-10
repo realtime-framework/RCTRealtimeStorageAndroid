@@ -16,7 +16,7 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 
 		...
 		include ':react-native-realtime-storage-android'
-		project(':react-native-realtime-storage-android').projectDir = new File(settingsDir,'../node_modules/reactnativestorageandroid')
+		project(':react-native-realtime-storage-android').projectDir = new File(settingsDir,'../node_modules/react-native-realtimestorage-android/reactnativestorageandroid')
 
 * In `android/app/build.gradle`
 
