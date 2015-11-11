@@ -53,10 +53,12 @@ class RCTRealtimeCloudStorageAndroid extends React.Component {
 
 	storageRef(aApplicationKey, aAuthenticationToken){
 		storage.storageRef(aApplicationKey, aAuthenticationToken, this.sId);
+		return this;
 	}
 
 	storageRefCustom(aApplicationKey, aAuthenticationToken, aIsCluster, aIsSecure, aUrl){
 		storage.storageRefCustom(aApplicationKey, aAuthenticationToken, aIsCluster, aIsSecure, aUrl, this.sId);
+		return this;
 	}
 
 	getTables(success:Function, error:Function){
