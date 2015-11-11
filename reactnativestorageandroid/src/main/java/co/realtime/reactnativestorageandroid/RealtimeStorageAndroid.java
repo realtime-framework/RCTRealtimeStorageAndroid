@@ -765,9 +765,9 @@ public class RealtimeStorageAndroid extends ReactContextBaseJavaModule {
     }
 
     @ReactMethod
-    public void limit(long value, final Integer sId, String table){
+    public void limit(Integer value, final Integer sId, String table){
         TableRef tableRef = _tableRefs.get(sId).get(table);
-        tableRef.limit(value);
+        tableRef.limit((long)value);
     }
 
     @ReactMethod

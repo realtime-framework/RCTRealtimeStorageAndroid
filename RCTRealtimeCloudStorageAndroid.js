@@ -96,12 +96,12 @@ class RCTRealtimeCloudStorageAndroid extends React.Component {
 	}
 
 	onReconnected(callback: Function){
-		storage.onReconnected(aAuthenticationToken, this.sId);
+		storage.onReconnect(this.sId);
 		RCTRealtimeCloudStorageAndroid.RTEventListener(this.sId + "-onReconnected", callback);
 	}
 
 	onReconnecting(callback: Function){
-		storage.onReconnected(aAuthenticationToken, this.sId);
+		storage.onReconnecting(this.sId);
 		RCTRealtimeCloudStorageAndroid.RTEventListener(this.sId + "-onReconnecting", callback);
 	}
 
