@@ -53,10 +53,12 @@ class RCTRealtimeCloudStorageAndroid extends React.Component {
 
 	storageRef(aApplicationKey, aAuthenticationToken){
 		storage.storageRef(aApplicationKey, aAuthenticationToken, this.sId);
+		return this;
 	}
 
 	storageRefCustom(aApplicationKey, aAuthenticationToken, aIsCluster, aIsSecure, aUrl){
 		storage.storageRefCustom(aApplicationKey, aAuthenticationToken, aIsCluster, aIsSecure, aUrl, this.sId);
+		return this;
 	}
 
 	getTables(success:Function, error:Function){
@@ -94,12 +96,12 @@ class RCTRealtimeCloudStorageAndroid extends React.Component {
 	}
 
 	onReconnected(callback: Function){
-		storage.onReconnected(aAuthenticationToken, this.sId);
+		storage.onReconnect(this.sId);
 		RCTRealtimeCloudStorageAndroid.RTEventListener(this.sId + "-onReconnected", callback);
 	}
 
 	onReconnecting(callback: Function){
-		storage.onReconnected(aAuthenticationToken, this.sId);
+		storage.onReconnecting(this.sId);
 		RCTRealtimeCloudStorageAndroid.RTEventListener(this.sId + "-onReconnecting", callback);
 	}
 
