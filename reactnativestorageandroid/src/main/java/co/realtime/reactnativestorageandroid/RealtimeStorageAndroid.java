@@ -289,7 +289,7 @@ public class RealtimeStorageAndroid extends ReactContextBaseJavaModule {
         storageRef.onReconnected(new OnReconnected() {
             @Override
             public void run(StorageRef storageRef) {
-                sendEvent(getReactApplicationContext(), sId + "-onReconnected", null);
+                sendEvent(getReactApplicationContext(), sId + "-onReconnect", null);
             }
         });
     }
@@ -303,7 +303,7 @@ public class RealtimeStorageAndroid extends ReactContextBaseJavaModule {
         storageRef.onReconnecting(new OnReconnecting() {
             @Override
             public void run(StorageRef storageRef) {
-                sendEvent(getReactApplicationContext(), sId + "-onReconnected", null);
+                sendEvent(getReactApplicationContext(), sId + "-onReconnecting", null);
             }
         });
     }
