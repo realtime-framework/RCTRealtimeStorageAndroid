@@ -38,9 +38,9 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 		}
 
 		
-* Add `new CustomReactPackage()` to the `getPackages()` method return list in `MainActivity`.
+* Add `new RealtimeStoragePackage()` to the `getPackages()` method return list in `MainActivity`.
 
-		import co.realtime.reactnativestorageandroid.CustomReactPackage; //<-- import
+		import co.realtime.reactnativestorageandroid.RealtimeStoragePackage; //<-- import
 
 		public class MainActivity extends ReactActivity {
 
@@ -50,7 +50,7 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 		    protected List<ReactPackage> getPackages() {
 		        return Arrays.<ReactPackage>asList(
 		                new MainReactPackage(),
-		                new CustomReactPackage() // <-- add CustomReactPackage object
+		                new RealtimeStoragePackage() // <-- add RealtimeStoragePackage object
 		        );
 		    }
 		   
@@ -72,8 +72,8 @@ Data will be synced in real-time between devices and browsers.
 
 ###Importing RCTRealtimeCloudStorageAndroid to your project
 
-	var module = require('RCTRealtimeCloudStorageAndroid');
-	var RCTRealtimeCloudStorage = new module();
+	import realtime from './RCTRealtimeCloudStorageAndroid';
+	var RCTRealtimeCloudStorage = new realtime();
 
 
 ####ProvisionLoad list
