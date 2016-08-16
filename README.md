@@ -38,7 +38,7 @@ If you are a developer, you can use Realtime Cloud Storage to create database ta
 		}
 
 		
-* Add `new RealtimeStoragePackage()` to the `getPackages()` method return list in `MainActivity`.
+* Add `new RealtimeStoragePackage()` to the `getPackages()` method return list in `MainApplication.java`.
 
 		import co.realtime.reactnativestorageandroid.RealtimeStoragePackage; //<-- import
 
